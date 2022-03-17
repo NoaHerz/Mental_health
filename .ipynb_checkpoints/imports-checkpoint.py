@@ -13,8 +13,7 @@ from scipy.stats import zscore
 from cmlreaders import CMLReader, get_data_index
 from pylab import *
 from correctEEGoffset import *
-from convertMstoWindowNumber import convertMstoWindowNumber, ms2WindowNumber
-from add_output_position import add_output_position
+from convertMstoWindowNumber import convertMstoWindowNumber
 
 import statsmodels.api as sm
 from scipy import stats
@@ -31,42 +30,9 @@ import seaborn as sns
 
 from statsmodels.stats.anova import AnovaRM
 from lrtest import lrtest
-from add_semantic_relatedness import add_semantic_relatedness, categorized_words
 
 from ptsa.data.filters import ButterworthFilter
 from ptsa.data.filters import MorletWaveletFilter
 from regionalizationModule import get_elec_regions,Loc2PairsTranslation
 import xarray as xr
 from getMTLregions import getMTLregions
-
-import numpy as np
-import pandas as pd
-from cmlreaders import CMLReader, get_data_index
-import pickle
-
-
-import scipy.signal
-from scipy.stats import zscore
-from correctEEGsubjects import correctEEGsubjects
-from correctEEGoffset import correctEEGoffset
-from getElecCats import getElecCats
-from missing_channels import missing_channels
-from getMTLregions import getMTLregions
-from getBadChannels import getBadChannels
-from event_type_index import event_type_index
-from add_semantic_similarity import add_semantic_similarity
-from add_semantic_similarity import case_insensitive_similarity
-from add_semantic_similarity import categorized_words
-from add_output_position import add_output_position
-from brain_label import brain_label
-
-from add_semantic_relatedness import add_semantic_relatedness,categorized_words
-import gensim.models as models
-import os, csv, numpy, pandas
-
-from ptsa.data.filters import ButterworthFilter
-from ptsa.data.filters import MorletWaveletFilter
-from add_mirror_buffer_adjusted import add_mirror_buffer_adjusted #
-from regionalizationModule import get_elec_regions,Loc2PairsTranslation
-import xarray as xr
-from average_tilt import average_tilt
